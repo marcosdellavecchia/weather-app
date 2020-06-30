@@ -128,13 +128,11 @@ window.addEventListener("load", () => {
               icon = "FOG";
               break;
           }
-          //setIcon
+          //set Icon
           setIcons(icon, document.querySelector(".icon"));
         });
     });
-  } else {
-    alert("Geo-location is not supported by your browser");
-  }
+  } //IF statement ends here
 
   function setIcons(icon, iconID) {
     const skycons = new Skycons({ color: "white" });
