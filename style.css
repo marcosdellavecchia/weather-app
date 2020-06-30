@@ -59,7 +59,8 @@ body {
 }
 
 .humidity-section,
-.wind-section {
+.wind-section,
+.pressure-section {
   padding: 5px;
 }
 

@@ -9,6 +9,7 @@ window.addEventListener("load", () => {
   let temperatureSection = document.querySelector(".temperature-section");
   let temperatureSpan = document.querySelector(".temperature-section span");
   let humiditySpan = document.querySelector(".humidity-percentage");
+  let pressureSpan = document.querySelector('.pressure-value');
   let windSection = document.querySelector(".wind-section");
   let windUnit = document.querySelector(".wind-unit");
   let windSpan = document.querySelector(".wind-speed");
@@ -35,6 +36,7 @@ window.addEventListener("load", () => {
           const humidity = data.main.humidity;
           //API's default wind speed is set to meters/sec, so we get it and convert to kilometers/hour
           const wind = Math.floor(data.wind.speed * 3.6);
+          const pressure = data.main.pressure;
           let icon = data.weather[0].icon;
 
           //Set DOM Elements from the API
@@ -43,6 +45,7 @@ window.addEventListener("load", () => {
           locationTimezone.textContent = location;
           humiditySpan.textContent = humidity;
           windSpan.textContent = wind;
+          pressureSpan.textContent = pressure;
 
           //Formula for farenheit
           let farenheit = (temperature + 32) * (9 / 5);
@@ -130,6 +133,7 @@ window.addEventListener("load", () => {
           }
           //set Icon
           setIcons(icon, document.querySelector(".icon"));
+          
         });
     });
   } //IF statement ends here
