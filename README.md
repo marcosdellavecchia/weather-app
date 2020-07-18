@@ -1,5 +1,5 @@
 # weatherApp
- ⛅ A weather app that shows:
+A weather app that shows:
 - Location
 - Weather icon
 - Temperature (click to change unit from °C to °F)
